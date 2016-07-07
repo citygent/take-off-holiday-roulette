@@ -11,4 +11,39 @@ $(document).ready(function () {
     }
   })
   $('#budget-amount').val('$' + $('.slider-container').slider('values', 0) + ' - $' + $('.slider-container').slider('values', 1))
+
+  if ($('#step1-budget').hasClass('active')) {
+    $('.prev-button').hide()
+  }
+
+  $('.prev-button').click(function () {
+    var $activeEl = $('.active')
+    $activeEl.hide().prev().show()
+    $activeEl.removeClass('active')
+    $activeEl.prev().addClass('active')
+  })
+
+  $('.next-button').click(function () {
+    var $activeEl = $('.active')
+    $activeEl.hide().next().show()
+    $activeEl.removeClass('active')
+    $activeEl.next().addClass('active')
+    $('.prev-button').show()
+  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 })
