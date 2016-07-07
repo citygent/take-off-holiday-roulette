@@ -48,7 +48,11 @@
   border-width: 31px;
   margin-left: -31px;
 }
-
+#step1-budget .budget-value {
+  border: 0; 
+  color: #f6931f; 
+  font-weight: bold;
+}
 #step2-period {
     
 }
