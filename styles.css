@@ -24,7 +24,7 @@ body {
 
 #step1-budget .header-question{
   height: 150px;
-  background: #428bca;
+  background: #46adad;
   color: white;
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   text-align: center;
@@ -53,8 +53,8 @@ body {
 }
 
 #step1-budget .header-question:after {
-  border-color: rgba(66, 139, 202, 0);
-  border-top-color: #428bca;
+    border-color: rgba(66, 139, 202, 0);
+  border-top-color: #46adad;
   border-width: 20px;
   margin-left: -20px;
 }
@@ -65,6 +65,11 @@ body {
   border-width: 20px;
   margin-left: -20px;
 }
+
+#budget-amount {
+  display: none;
+}
+
 .budget-slider-container {
   width: 80%;
   margin: auto;
@@ -72,31 +77,16 @@ body {
 }
 
 .ui-slider-horizontal {
-  height: 1.5em
+  height: 1.5em;
+  border-radius: 0px;
 }
 
-.ui-slider .ui-slider-handle.ui-widet-content .ui-state-default {
-    width:50px; 
-    height:50px; 
-    background:url("./public/images/money.png") no-repeat; overflow: hidden; 
-    position:absolute;
-    top: -10px;
-    border-style:none; 
-}
-
-.budget-slider-container .ui-state-default {
-  background: none;
-}
-.budget-slider-container .ui-slider .ui-slider-handle {
-  width: 14px;
-  height: 18px;
-  margin-left: -5px;
-  top: -4px;
-  border: none;
-  background: none;
-}
-.budget-slider-container  {
-  height: 10px;
+.budget-slider-container .ui-slider-handle.ui-state-default {
+   background: url(./public/images/money.png) no-repeat scroll 50% 50%;
+   width: 40px;
+   height: 50px;
+   border: none;
+   margin-top: -10px;
 }
 
 #step2-period {

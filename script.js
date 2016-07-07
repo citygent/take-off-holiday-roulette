@@ -5,7 +5,7 @@ $(document).ready(function () {
     range: true,
     max: 5000,
     min: 0,
-    values: [500, 100],
+    values: [500, 1000],
     slide: function (event, ui) {
       $('#budget-amount').val('$' + ui.values[ 0 ] + ' - $' + ui.values[1])
     }
