@@ -6,6 +6,7 @@ const path = require('path'); // path.join
 const pp = function(s){ return path.join(__dirname, s); };
 const app = express();
 const server = require('http').createServer(app); // or https
+const sql = require('mssql');
 
 // Pug template engine - previously Jade - http://jade-lang.com/
 app.set('views', pp('views')); // where templates are located
