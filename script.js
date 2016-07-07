@@ -11,5 +11,4 @@ $(document).ready(function () {
     }
   })
   $('#budget-amount').val('$' + $('.slider-container').slider('values', 0) + ' - $' + $('.slider-container').slider('values', 1))
-
 })

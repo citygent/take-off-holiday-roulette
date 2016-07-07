@@ -34,6 +34,20 @@
   width: 0;
   position: absolute;
   pointer-events: none;
+  z-index: 9;
+}
+
+#step1-budget .header-question:after {
+	border-color: rgba(255, 255, 255, 0);
+  border-top-color: #ffffff;
+  border-width: 20px;
+  margin-left: -20px;
+}
+#step1-budget .header-question:before {
+	border-color: rgba(255, 255, 255, 0);
+  border-top-color: #ffffff;
+  border-width: 20px;
+  margin-left: -20px;
 }
 
 #step1-budget .answers:after {
@@ -67,6 +81,14 @@
 
 #step5-roulette {
     
+}
+
+.prev-button {
+
+}
+
+.next-button {
+  
 }
 
 .progress-bar {
