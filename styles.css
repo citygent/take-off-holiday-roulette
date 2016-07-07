@@ -2,26 +2,55 @@
 
 }
 
-#step1-budget, #step2-period, #step3-holiday-type, #step4-passengers , #step5-roulette {
-    width: 60%;
-    height: 450px;
-    background: white;
-    border: 1px solid #00ca9b;
-    margin: auto;
+.holidays-widget {
+  display: none;
+  width: 60%;
+  height: 450px;
+  background: white;
+  border: 1px solid #00ca9b;
+  margin: auto;
+}
+
+.holidays-widget:first-child {
+  display: block;
 }
 
 #step1-budget .header-question{
-	height: 100px;
-	background: white;
+  height: 150px;
+  background: white;
 }
 
-#step1-budget .asnwers {
-	height: 350px;
-	background: #46adad;
+#step1-budget .answers {
+  height: 300px;
+  background: #46adad;
+  position: relative;        
+} 
+#step1-budget .answers:after, #step1-budget .answers:before {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+#step1-budget .answers:after {
+  border-color: rgba(70, 173, 173, 0);
+  border-bottom-color: #46adad;
+  border-width: 25px;
+  margin-left: -25px;
+}
+#step1-budget .answers:before {
+  border-color: rgba(70, 173, 173, 0);
+  border-bottom-color: #46adad;
+  border-width: 31px;
+  margin-left: -31px;
 }
 
 #step2-period {
-	
+    
 }
 
 #step3-holiday-type {
@@ -33,7 +62,7 @@
 }
 
 #step5-roulette {
-	
+    
 }
 
 .progress-bar {
