@@ -5,7 +5,6 @@ body {
 #holidays-widget-wrapper {
   position: relative;
   width: 850px;
-
   margin: 0 auto;
 }
 
@@ -22,7 +21,7 @@ body {
   display: block;
 }
 
-#step1-budget .header-question{
+.header-question {
   height: 150px;
   background: #46adad;
   color: white;
@@ -37,11 +36,11 @@ body {
   height: 300px;
   position: relative;        
 } 
-#step1-budget .header-question {
+.header-question {
   position: relative;
 }
 
-#step1-budget .header-question:after, #step1-budget .header-question:before {
+.header-question:after, .header-question:before {
   top: 100%;
   left: 50%;
   border: solid transparent;
@@ -52,14 +51,14 @@ body {
   pointer-events: none;
 }
 
-#step1-budget .header-question:after {
-    border-color: rgba(66, 139, 202, 0);
+.header-question:after {
+  border-color: rgba(66, 139, 202, 0);
   border-top-color: #46adad;
   border-width: 20px;
   margin-left: -20px;
 }
 
-#step1-budget .header-question:before {
+.header-question:before {
   border-color: rgba(255, 255, 255, 0);
   border-top-color: #ffffff;
   border-width: 20px;
@@ -89,8 +88,18 @@ body {
    margin-top: -10px;
 }
 
-#step2-period {
-  background-color: red;
+/* Period section */
+#period-container {
+  padding-top: 25px;
+  margin-top: 80px;
+  margin: auto;
+  padding-bottom: 20px;
+  display: block;
+  width: 60%;
+}
+
+#period-container .date-picker-wrapper {
+  background-color: white;
 }
 
 #step3-holiday-type {
