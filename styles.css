@@ -1,6 +1,11 @@
+body {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
 #holidays-widget-wrapper {
   position: relative;
-  width: 60%;
+  width: 850px;
+
   margin: 0 auto;
 }
 
@@ -9,7 +14,7 @@
   width: 100%;
   height: 450px;
   background: white;
-  border: 1px solid #00ca9b;
+  border: 1px solid #dadada;
   margin: auto;
 }
 
@@ -19,16 +24,25 @@
 
 #step1-budget .header-question{
   height: 150px;
-  background: white;
+  background: #46adad;
+  color: white;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  text-align: center;
+  font-size: 38px;
+  box-sizing: border-box;
+  padding-top: 45px;
 }
 
 #step1-budget .answers {
   height: 300px;
-  background: #46adad;
   position: relative;        
 } 
-#step1-budget .answers:after, #step1-budget .answers:before {
-  bottom: 100%;
+#step1-budget .header-question {
+  position: relative;
+}
+
+#step1-budget .header-question:after, #step1-budget .header-question:before {
+  top: 100%;
   left: 50%;
   border: solid transparent;
   content: " ";
@@ -36,39 +50,45 @@
   width: 0;
   position: absolute;
   pointer-events: none;
-  z-index: 9;
 }
 
 #step1-budget .header-question:after {
-	border-color: rgba(255, 255, 255, 0);
-  border-top-color: #ffffff;
+    border-color: rgba(66, 139, 202, 0);
+  border-top-color: #46adad;
   border-width: 20px;
   margin-left: -20px;
 }
+
 #step1-budget .header-question:before {
-	border-color: rgba(255, 255, 255, 0);
+  border-color: rgba(255, 255, 255, 0);
   border-top-color: #ffffff;
   border-width: 20px;
   margin-left: -20px;
 }
 
-#step1-budget .answers:after {
-  border-color: rgba(70, 173, 173, 0);
-  border-bottom-color: #46adad;
-  border-width: 25px;
-  margin-left: -25px;
+#budget-amount {
+  display: none;
 }
-#step1-budget .answers:before {
-  border-color: rgba(70, 173, 173, 0);
-  border-bottom-color: #46adad;
-  border-width: 31px;
-  margin-left: -31px;
+
+.budget-slider-container {
+  width: 80%;
+  margin: auto;
+  margin-top: 90px;
 }
-#step1-budget .budget-value {
-  border: 0; 
-  color: #f6931f; 
-  font-weight: bold;
+
+.ui-slider-horizontal {
+  height: 1.5em;
+  border-radius: 0px;
 }
+
+.budget-slider-container .ui-slider-handle.ui-state-default {
+   background: url(./public/images/money.png) no-repeat scroll 50% 50%;
+   width: 40px;
+   height: 50px;
+   border: none;
+   margin-top: -10px;
+}
+
 #step2-period {
   background-color: red;
 }
@@ -86,13 +106,25 @@
 }
 .prev-button, .next-button{
   position: absolute;
-  bottom: 0;
-  background-color: white;
-  width: 80px;
+  bottom: 30px;
+  width: 90px;
+  font-size: 18px;
   height: 30px;
+  color: #e44c53; 
 }
 .prev-button {
   left: 12px;
+}
+
+.next-button:after {
+  content: '';
+  background: url(./public/images/arrow.png) no-repeat;
+  display: block;
+  width: 45px;
+  background-size: contain;
+  height: 45px;
+  float: right;
+  margin-top:-12px;
 }
 
 .next-button {

@@ -31,6 +31,13 @@ $(document).ready(function () {
     $('.prev-button').show()
   })
 
+  $('#period-length').dateRangePicker({
+    inline: true,
+    container: '#period-container',
+    alwaysOpen: true,
+    minDays: 2,
+    maxDays: 14
+  })
 
 
 

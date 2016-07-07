@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link rel="stylesheet" href="./public/js/libraries/daterangepicker.min.css">
 	<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 	<link rel="stylesheet" type="text/css" href="styles.css">
-	<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js'></script>
-	<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
+	<script type="text/javascript" src='./public/js/libraries/moment.min.js'></script>
+	<script type="text/javascript" src='./public/js/libraries/jquery.min.js'></script>
+	<script type='text/javascript' src='./public/js/libraries/jquery-ui.min.js'></script>
+	<script type="text/javascript" src="./public/js/libraries/jquery.daterangepicker.min.js"></script>
 	<script type='text/javascript' src='script.js'></script>
 </head>
 <body>
@@ -22,8 +25,8 @@
 			<div class="header-question">How long for?</div>
 			<div class='answers'>
 				<label for="period-length"></label>
-  			<input type="text" name="period" id="period-length" readonly class="period-length">
-				<div class="period-slider-container">
+  			<input name="period" id="period-length" class="period-length">
+				<div id="period-container">
 				</div>
 			</div>
 		</div>
