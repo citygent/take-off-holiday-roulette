@@ -4,45 +4,29 @@
 
 .holidays-widget {
   display: none;
-  position: absolute;
   width: 60%;
-  margin-left: 20%;
   height: 450px;
   background: white;
-  border: 1px solid #cacaca;
-}
-
-.holidays-widget:first-child {
-	display: block;
-}
-
-#step1-budget .header-question{
-  position: relative;
-	height: 150px;
-	background: white;
-  text-align: center;
-  font-size: 50px;
-  padding-top: 40px;
-  box-sizing: border-box;
-  color: #606060;
-  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;   
-}
-
-#step1-budget .answers {
-	height: 300px;
-	background: #46adad;
-	position: relative;
-  box-sizing: border-box;
-  padding-top: 100px;		
-}
-
-#step1-budget .answers .slider-container {
-  width: 80%;
+  border: 1px solid #00ca9b;
   margin: auto;
 }
 
-#step1-budget .header-question:after, #step1-budget .header-question:before {
-	top: 100%;
+.holidays-widget:first-child {
+  display: block;
+}
+
+#step1-budget .header-question{
+  height: 150px;
+  background: white;
+}
+
+#step1-budget .answers {
+  height: 300px;
+  background: #46adad;
+  position: relative;        
+} 
+#step1-budget .answers:after, #step1-budget .answers:before {
+  bottom: 100%;
   left: 50%;
   border: solid transparent;
   content: " ";
@@ -66,8 +50,25 @@
   margin-left: -20px;
 }
 
+#step1-budget .answers:after {
+  border-color: rgba(70, 173, 173, 0);
+  border-bottom-color: #46adad;
+  border-width: 25px;
+  margin-left: -25px;
+}
+#step1-budget .answers:before {
+  border-color: rgba(70, 173, 173, 0);
+  border-bottom-color: #46adad;
+  border-width: 31px;
+  margin-left: -31px;
+}
+#step1-budget .budget-value {
+  border: 0; 
+  color: #f6931f; 
+  font-weight: bold;
+}
 #step2-period {
-	
+    
 }
 
 #step3-holiday-type {
@@ -79,7 +80,7 @@
 }
 
 #step5-roulette {
-	
+    
 }
 
 .prev-button {
