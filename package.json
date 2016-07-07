@@ -1,0 +1,19 @@
+{
+  "name": "holiday-roulette",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/citygent/take-off-holiday-roulette.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/citygent/take-off-holiday-roulette/issues"
+  },
+  "homepage": "https://github.com/citygent/take-off-holiday-roulette#readme"
+}
