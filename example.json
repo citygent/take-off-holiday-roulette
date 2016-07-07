@@ -1,0 +1,28 @@
+{
+  "search" : [
+    {
+      "budgetFrom": "533",
+      "budgetTo": "730",
+      "dateFrom": "2016-07-13",
+      "dateTo": "2016-07-26",
+      "type": "city",
+      "cohort": {
+        "adults": "2",
+        "children": "3",
+        "infants": "1",
+      },
+    }
+      {
+      "budgetFrom": "700",
+      "budgetTo": "2000",
+      "dateFrom": "2016-08-19",
+      "dateTo": "2016-08-25",
+      "type": "beach",
+      "cohort": {
+        "adults": "2",
+        "children": "0",
+        "infants": "0",
+      },
+    }
+  ]
+}

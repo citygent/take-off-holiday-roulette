@@ -7,11 +7,13 @@ $(document).ready(function () {
     min: 0,
     values: [500, 1000],
     slide: function (event, ui) {
-      $('#budget-amount').val('$' + ui.values[ 0 ] + ' - $' + ui.values[1])
+      $('#budget-amount').val('£' + ui.values[ 0 ] + ' - £' + ui.values[1])
     }
   })
-  $('#budget-amount').val('$' + $('.budget-slider-container').slider('values', 0) + ' - $' + $('.budget-slider-container').slider('values', 1))
+  var $budgetVal = $('#budget-amount')
+  $budgetVal.val('£' + $('.budget-slider-container').slider('values', 0) + ' - £' + $('.budget-slider-container').slider('values', 1))
 
+// 'Dirty SPA nonsense'
   if ($('#step1-budget').hasClass('active')) {
     $('.prev-button').hide()
   }
