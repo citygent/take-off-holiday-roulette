@@ -1,0 +1,41 @@
+#holidays-widget-wrapper {
+
+}
+
+#step1-budget, #step2-period, #step3-holiday-type, #step4-passengers , #step5-roulette {
+    width: 60%;
+    height: 450px;
+    background: white;
+    border: 1px solid #00ca9b;
+    margin: auto;
+}
+
+#step1-budget .header-question{
+	height: 100px;
+	background: white;
+}
+
+#step1-budget .asnwers {
+	height: 350px;
+	background: #46adad;
+}
+
+#step2-period {
+	
+}
+
+#step3-holiday-type {
+
+}
+
+#step4-passengers {
+
+}
+
+#step5-roulette {
+	
+}
+
+.progress-bar {
+
+}

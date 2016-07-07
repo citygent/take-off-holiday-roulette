@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
 	<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js'></script>
-	<script type='text/javascript' src='app.js'></script>
 	<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js'></script>
-	<link rel='stylesheet' src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.css'>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type='text/javascript' src='script.js'></script>
 </head>
 <body>
 	<div id="holidays-widget-wrapper">
-		<div id="step1-budget">
-			<div class="slider-container">
+		<div id="step1-budget" class="holidays-widget">
+			<div class="header-question"></div>
+			<div class='answers'>
+				<div class="slider-container">
+				</div>
 			</div>
 		</div>
-		<div id="step2-period">
+		<div id="step2-period" class="holidays-widget">
+
 		</div>
-		<div id="step3-holiday-type">
+		<div id="step3-holiday-type" class="holidays-widget">
 		</div>
-		<div id="step4-passengers">
+
+		<div id="step4-passengers" class="holidays-widget">
 		</div>
-		<div id="step5-roulette">
+
+		<div id="step5-roulette" class="holidays-widget">
 		</div>
+
+		<div class="progress-bar" class="holidays-widget">
+		</div>
+		
 	</div>
 </body>
 </html>
