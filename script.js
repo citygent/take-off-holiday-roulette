@@ -10,9 +10,65 @@ $(document).ready(function () {
       $('#budget-amount').val('£' + ui.values[ 0 ] + ' - £' + ui.values[1])
     }
   })
-  var $budgetVal = $('#budget-amount')
-  $budgetVal.val('£' + $('.budget-slider-container').slider('values', 0) + ' - £' + $('.budget-slider-container').slider('values', 1))
-
+// init the datePicker for step2 - period
+  $('#period-length').dateRangePicker({
+    inline: true,
+    container: '#period-container',
+    alwaysOpen: true,
+    minDays: 2,
+    maxDays: 14
+  })
+// get the values for step4 - passengers
+  var cohort = {
+    adults: 1,
+    children: 0,
+    infants: 0
+  }
+  $('input[name=who]').change(function () {
+    switch ($('input[name=who]').filter(':checked').val()) {
+      case 'single':
+        cohort.adults = 1
+        $('.who-fam').hide()
+        break
+      case 'couple':
+        cohort.adults = 2
+        $('.who-fam').hide()
+        break
+      case 'fam':
+        $('.who-fam').show()
+        $('#who-adults').change(updateCohort)
+        $('#who-children').change(updateCohort)
+        $('#who-infants').change(updateCohort)
+        break
+      default:
+        cohort.adults = 1
+    }
+  })
+  function updateCohort () {
+    // well this is horrible! :)
+    cohort.adults = $('#who-adults').val()
+    cohort.children = $('#who-children').val()
+    cohort.infants = $('#who-infants').val()
+  }
+// SEND ZE DATA.
+  function sendData () {
+    var periodLength = $('#period-length').val().split(' to ')
+    var dateFrom = periodLength[0]
+    var dateTo = periodLength[1]
+    var type = $('input[name=type]').filter(':checked').val() || ''
+    var budgetFrom = window.budgetFrom = $('.budget-slider-container').slider('values', 0)
+    var budgetTo = window.budgetTo = $('.budget-slider-container').slider('values', 1)
+    var search = {
+      budgetFrom: budgetFrom,
+      budgetTo: budgetTo,
+      dateFrom: dateFrom,
+      dateTo: dateTo,
+      type: type,
+      cohort: cohort
+    }
+    console.log(search)
+  }
+// ====================================================
 // 'Dirty SPA nonsense'
   if ($('#step1-budget').hasClass('active')) {
     $('.prev-button').hide()
@@ -27,22 +83,23 @@ $(document).ready(function () {
 
   $('.next-button').click(function () {
     var $activeEl = $('.active')
-    $activeEl.hide().next().show()
-    $activeEl.removeClass('active')
-    $activeEl.next().addClass('active')
-    $('.prev-button').show()
+    if (!$('.active').is('#step3-holiday-type')) {
+      $activeEl.hide().next().show()
+      $activeEl.removeClass('active')
+      $activeEl.next().addClass('active')
+      $('.prev-button').show()
+      $('.play-button').hide()
+    } else if ($('.active').is('#step3-holiday-type')) {
+      $activeEl.hide().next().show()
+      $activeEl.removeClass('active')
+      $activeEl.next().addClass('active')
+      $('.next-button').hide()
+      $('.play-button').show()
+    }
   })
 
-  $('#period-length').dateRangePicker({
-    inline: true,
-    container: '#period-container',
-    alwaysOpen: true,
-    minDays: 2,
-    maxDays: 14
+  $('.play-button').click(function () {
+    sendData()
   })
-
-
-
-
 
 })

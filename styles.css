@@ -1,7 +1,9 @@
 body {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
-
+.play-button {
+  display: none;
+}
 #holidays-widget-wrapper {
   position: relative;
   width: 850px;

@@ -16,7 +16,7 @@
 			<div class="header-question">What's your budget?</div>
 			<div class='answers'>
 				<label for="budget-amount"></label>
-  			<input type="text" name="what" id="budget-amount" readonly class="budget-value">
+  			<input type="text" name="budget" id="budget-amount" readonly class="budget-value">
 				<div class="budget-slider-container">
 				</div>
 			</div>
@@ -34,42 +34,76 @@
 			<div class="header-question">Where would you like to relax?</div>
 			<div class='answers'>
 				<div class="where-image">
-					<input class="where-radio" type="radio" name="where" value="beach" id="where-beach">
+					<input class="where-radio" type="radio" name="type" value="beach" id="where-beach">
 					<img src="./public/images/type-beach.png" alt="beach">
 				</div>
 				<div class="where-image">
-					<input class="where-radio" type="radio" name="where" value="city" id="where-city">
+					<input class="where-radio" type="radio" name="type" value="city" id="where-city">
 					<img src="./public/images/type-city.png" alt="city">
 				</div>
 				<div class="where-image">
-					<input class="where-radio" type="radio" name="where" value="mountain" id="where-mountain">
+					<input class="where-radio" type="radio" name="type" value="mountain" id="where-mountain">
 					<img src="./public/images/type-mountain.png" alt="mountain">
 				</div>
 			</div>
 		</div>
-
 		<div id="step4-passengers" class="holidays-widget">
 			<div class="header-question">Who's going?</div>
 			<div class='answers'>
 				<div class="who-image">
-					<input class="who-radio" type="radio" name="who" value="single" id="who-single">
-					<img src="./public/images/pax-single.png" alt="single">
+					<input class="who-radio" type="radio" name="who" value="single" id="who-single" checked="checked">
+					<label for="single">
+						<img src="./public/images/pax-single.png" alt="single">
+					</label>
 				</div>
 				<div class="who-image">
 					<input class="who-radio" type="radio" name="who" value="couple" id="who-couple">
-					<img src="./public/images/pax-couple.png" alt="couple">
+					<label for="couple">
+						<img src="./public/images/pax-couple.png" alt="couple">
+					</label>
 				</div>
 				<div class="who-image">
 					<input class="who-radio" type="radio" name="who" value="fam" id="who-fam">
-					<img src="./public/images/pax-fam.png" alt="fam">
+					<label for="fam">
+						<img src="./public/images/pax-fam.png" alt="fam">
+					</label>
+				</div>
+				<div class="who-fam">
+					<select id="who-adults" name="adults">
+					  <option value="0" selected>0</option> 
+					  <option value="1">1</option>
+					  <option value="2">2</option>
+					  <option value="3">3</option>
+					  <option value="4">4</option>
+					  <option value="5">5</option>
+					  <option value="6">6</option>
+					  <option value="7">7</option>
+					  <option value="8">8</option>
+					  <option value="9">9</option>
+					</select>
+					<select id="who-children" name="children">
+					  <option value="0" selected>0</option> 
+					  <option value="1">1</option>
+					  <option value="2">2</option>
+					  <option value="3">3</option>
+					  <option value="4">4</option>
+					  <option value="5">5</option>
+					</select>
+					<select id="who-infants" name="infants">
+					  <option value="0" selected>0</option> 
+					  <option value="1">1</option>
+					  <option value="2">2</option>
+					  <option value="3">3</option>
+					</select>
 				</div>
 			</div>
 		</div>
 
 		<div id="step5-roulette" class="holidays-widget">
 		</div>
-		<div class="prev-button"></div>
+		<div class="prev-button"> Prev </div>
 		<div class="next-button"> Next </div>
+		<div class="play-button"> Play </div>
 		<div class="progress-bar" class="holidays-widget">
 		</div>
 		
