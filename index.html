@@ -13,7 +13,7 @@
 			<div class="header-question">What's your budget?</div>
 			<div class='answers'>
 				<label for="budget-amount"></label>
-  			<input type="text" id="budget-amount" readonly class="budget-value">
+  			<input type="text" name="what" id="budget-amount" readonly class="budget-value">
 				<div class="slider-container">
 				</div>
 			</div>
@@ -21,7 +21,18 @@
 		<div id="step2-period" class="holidays-widget">
 			<div class="header-question">Where would you like to relax?</div>
 			<div class='answers'>
-				
+				<div class="where-image">
+					<input class="where-radio" type="radio" name="where" value="beach" id="where-beach">
+					<img src="./public/images/type-beach.png" alt="beach">
+				</div>
+				<div class="where-image">
+					<input class="where-radio" type="radio" name="where" value="city" id="where-city">
+					<img src="./public/images/type-city.png" alt="city">
+				</div>
+				<div class="where-image">
+					<input class="where-radio" type="radio" name="where" value="mountain" id="where-mountain">
+					<img src="./public/images/type-mountain.png" alt="mountain">
+				</div>
 			</div>
 		</div>
 		<div id="step3-holiday-type" class="holidays-widget">

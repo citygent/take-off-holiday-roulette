@@ -31,17 +31,7 @@ $(document).ready(function () {
     $('.prev-button').show()
   })
 
-
-
-
-
-
-
-
-
-
-
-
+  
 
 
 
