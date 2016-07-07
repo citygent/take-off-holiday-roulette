@@ -29,6 +29,21 @@ app.get('/', function (req, res) {
 	); 
 })
 
+app.get('/connect', function (req, res) {
+	sql.connect("mssql://sam:pass123!@takeoff.database.windows.net:1433/Wolverines").then(function() {
+		console.log("connected");
+    // Query 
+		new sql.Request().query('select * from mytable').then(function(recordset) {
+			console.dir(recordset);
+			res.send("ok");
+		}).catch(function(err) {
+			// ... query error checks 
+		});
+	}).catch(function(err) {
+		// ... connect error checks 
+	});
+});
+
 
 /* Specify both GET and POST endpoint */
 app.route('/debug') 
