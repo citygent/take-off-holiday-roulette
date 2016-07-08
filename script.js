@@ -7,8 +7,13 @@ $(document).ready(function () {
     min: 0,
     values: [500, 1000],
     slide: function (event, ui) {
-      $('#budget-amount').val('£' + ui.values[ 0 ] + ' - £' + ui.values[1])
+      $('#budget-amount').val('&pound;' + ui.values[ 0 ] + ' - &pound;' + ui.values[1])
+      $('.price-container0').val('£' + ui.values[ 0 ])
+      $('.price-container1').val('£' + ui.values[ 1 ])
     }
+  })
+  $('.budget-slider-container').find('span').each(function (i, el) {
+    $(el).append('<input type="text" readonly class="price-container' + i + '">')
   })
 // init the datePicker for step2 - period
   $('#period-length').dateRangePicker({
@@ -24,18 +29,18 @@ $(document).ready(function () {
     children: 0,
     infants: 0
   }
-  $('input[name=who]').change(function () {
-    switch ($('input[name=who]').filter(':checked').val()) {
+  $('input[name=who]').on('change', function () {
+    switch (this.value) {
       case 'single':
         cohort.adults = 1
-        $('.who-fam').hide()
+        $('div.who-fam').hide()
         break
       case 'couple':
         cohort.adults = 2
-        $('.who-fam').hide()
+        $('div.who-fam').hide()
         break
       case 'fam':
-        $('.who-fam').show()
+        $('div.who-fam').show()
         $('#who-adults').change(updateCohort)
         $('#who-children').change(updateCohort)
         $('#who-infants').change(updateCohort)
@@ -73,8 +78,9 @@ $(document).ready(function () {
   }
   function checkRespectiveBox (e) {
     var uncheckFamily = $(e.target).prev('input').attr('class').split(' ') && $(e.target).prev('input').attr('class').split(' ')[0]
-    $('.' + uncheckFamily).prop('checked', false)
-    $(e.target).prev('input.' + uncheckFamily).prop('checked', true)
+    $('input.' + uncheckFamily).prop('checked', false).trigger('change')
+    $('img.' + uncheckFamily).removeClass('selected')
+    $(e.target).addClass('selected').prev('input.' + uncheckFamily).prop('checked', true).trigger('change')
   }
 // ====================================================
 // click on image checks the box.
@@ -100,6 +106,7 @@ $(document).ready(function () {
       $activeEl.next().addClass('active')
       $('.prev-button').show()
       $('.play-button').hide()
+      $('div.who-fam').hide()
     } else if ($('.active').is('#step3-holiday-type')) {
       $activeEl.hide().next().show()
       $activeEl.removeClass('active')

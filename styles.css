@@ -1,19 +1,22 @@
 body {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
-.play-button {
-  display: none;
-}
+
 #holidays-widget-wrapper {
   position: relative;
   width: 850px;
+  height: 100%;
   margin: 0 auto;
+}
+img.selected {
+  background-color: rgba(222, 35, 43, 0.61);
+  border-radius: 100%;
 }
 
 .holidays-widget {
   display: none;
   width: 100%;
-  height: 550px;
+  height: 620px;
   background: white;
   border: 1px solid #dadada;
   margin: auto;
@@ -144,14 +147,13 @@ body {
   display: none;
 }
 
-/* TYPE of holiday*/
-.where-radio {
-  display: none;
+label {
+  width: 30%;
+  display: inline-block;
 }
-
-.where-image img{
-  width: 33.33%;
-  float: left;
+/* TYPE of holiday*/
+input.where-radio {
+  display: none;
 }
 
 #step3-holiday-type .answers {
@@ -160,13 +162,16 @@ body {
 
 
 /* passengers */
-.who-radio {
+input.who-radio {
   display: none;
 }
 
-.who-image img{
+.who-image, .where-image {
   width: 33.33%;
   float: left;
+}
+.who-image img, .where-image img {
+  width: 100%;
 }
 
 #step4-passengers .answers {
@@ -267,7 +272,13 @@ body {
 #step5-roulette {
     
 }
-.prev-button, .next-button{
+.play-button {
+  display: none;
+}
+input:focus {
+    outline:none;
+}
+.prev-button, .next-button, .play-button{
   position: absolute;
   bottom: 30px;
   width: 100px;
@@ -278,8 +289,15 @@ body {
 .prev-button {
   left: 60px;
 }
+.ui-slider-handle input {
+  margin-top: 50px;
+  border: 0;
+  font-size: larger;
+  color: gold;
+  width: 75px;
+}
 
-.next-button:after {
+.next-button:after, .play-button:after {
   content: '';
   background: url(./public/images/arrow.png) no-repeat;
   display: block;
@@ -304,8 +322,11 @@ body {
   margin-right: 10px;
 }
 
-.next-button {
+.next-button, .play-button {
   right: 60px;
+}
+div.who-fam {
+  display: none;
 }
 
 .progress-bar {
