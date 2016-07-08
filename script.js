@@ -68,6 +68,9 @@ $(document).ready(function () {
     }
     console.log(search)
   }
+  function spinWheelofDeath () {
+    sendData()
+  }
 // ====================================================
 // 'Dirty SPA nonsense'
   if ($('#step1-budget').hasClass('active')) {
@@ -99,7 +102,14 @@ $(document).ready(function () {
   })
 
   $('.play-button').click(function () {
-    sendData()
+    spinWheelofDeath()
+    var $activeEl = $('.active')
+    $activeEl.hide().next().show()
+    $activeEl.removeClass('active')
+    $activeEl.next().addClass('active')
+    $('.prev-button').hide()
+    $('.next-button').hide()
+    $('.play-button').hide()
   })
 
 })
