@@ -13,7 +13,7 @@ body {
 .holidays-widget {
   display: none;
   width: 100%;
-  height: 450px;
+  height: 550px;
   background: white;
   border: 1px solid #dadada;
   margin: auto;
@@ -92,7 +92,7 @@ body {
 
 /* Period section */
 #period-container {
-  padding-top: 25px;
+  padding-top: 50px;
   margin-top: 80px;
   margin: auto;
   padding-bottom: 20px;
@@ -102,7 +102,74 @@ body {
 
 #period-container .date-picker-wrapper {
   background-color: white;
+  width: 100%;
 }
+
+.date-picker-wrapper .month-wrapper table, .date-picker-wrapper .month-wrapper table.month2 {
+  width: 247px;
+}
+
+.month-wrapper {
+  width: 495px !important;
+}
+
+.date-picker-wrapper .month-wrapper table .day.real-today {
+  background-color: #46adad;
+}
+
+.date-picker-wrapper table .caption {
+  background-color: #f4f4f4;
+}
+
+.date-picker-wrapper .month-wrapper table .day.checked {
+  background-color: #aedede;
+}
+
+.date-picker-wrapper .first-date-selected, .date-picker-wrapper .last-date-selected {
+  background-color: #46adad!important;
+}
+
+.date-picker-wrapper .month-wrapper table .day.toMonth.hovering {
+  background-color: #aedede;
+}
+
+.date-picker-wrapper b {
+  color: #46adad;
+}
+
+#period-length {
+  display: none;
+}
+
+/* TYPE of holiday*/
+.where-radio {
+  display: none;
+}
+
+.where-image img{
+  width: 33.33%;
+  float: left;
+}
+
+#step3-holiday-type .answers {
+  margin-top: 40px;
+}
+
+
+/* passengers */
+.who-radio {
+  display: none;
+}
+
+.who-image img{
+  width: 33.33%;
+  float: left;
+}
+
+#step4-passengers .answers {
+  margin-top: 40px;
+}
+
 
 #step3-holiday-type {
 
@@ -118,13 +185,13 @@ body {
 .prev-button, .next-button{
   position: absolute;
   bottom: 30px;
-  width: 90px;
+  width: 100px;
   font-size: 18px;
   height: 30px;
   color: #e44c53; 
 }
 .prev-button {
-  left: 12px;
+  left: 60px;
 }
 
 .next-button:after {
@@ -137,9 +204,23 @@ body {
   float: right;
   margin-top:-12px;
 }
+.prev-button:after {
+  content: '';
+  background: url(./public/images/arrow.png) no-repeat;
+  display: block;
+  width: 45px;
+  background-size: contain;
+  height: 45px;
+  float: left;
+  margin-top:-12px;
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -webkit-transform: rotate(180deg); /* Safari */
+  transform: rotate(180deg);
+  margin-right: 10px;
+}
 
 .next-button {
-  right: 12px;
+  right: 60px;
 }
 
 .progress-bar {
