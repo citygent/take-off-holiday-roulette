@@ -39,9 +39,5 @@ $(document).ready(function () {
     maxDays: 14
   })
 
-//Saving preferences 
-
-
-
 
 })
