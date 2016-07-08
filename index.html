@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="./public/js/libraries/daterangepicker.min.css">
+	<link rel="stylesheet" href="./public/js/libraries/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script type="text/javascript" src='./public/js/libraries/moment.min.js'></script>
+	<script type="text/javascript" src='./public/js/libraries/jquery.min.js'></script>
+	<script type='text/javascript' src='./public/js/libraries/jquery-ui.min.js'></script>
+	<script type="text/javascript" src="./public/js/libraries/jquery.daterangepicker.min.js"></script>
+	<script type='text/javascript' src='script.js'></script>
+	<meta charset="utf-8">
+</head>
+<body>
+	<div id="holidays-widget-wrapper">
+		<div id="step1-budget" class="holidays-widget active">
+			<div class="header-question">What's your budget?</div>
+			<div class='answers'>
+				<label for="budget-amount"></label>
+  			<input type="text" name="budget" id="budget-amount" readonly class="budget-value">
+				<div class="budget-slider-container">
+				</div>
+			</div>
+		</div>
+		<div id="step2-period" class="holidays-widget">
+			<div class="header-question">How long for?</div>
+			<div class='answers'>
+				<label for="period-length"></label>
+  			<input name="period" id="period-length" class="period-length">
+				<div id="period-container">
+				</div>
+			</div>
+		</div>
+		<div id="step3-holiday-type" class="holidays-widget">
+			<div class="header-question">Where would you like to relax?</div>
+			<div class='answers'>
+				<div class="where-image">
+					<input class="where-radio" type="radio" name="type" value="beach" id="where-beach">
+					<img class="radio-img where-radio" src="./public/images/type-beach.png" alt="beach">
+				</div>
+				<div class="where-image">
+					<input class="where-radio" type="radio" name="type" value="city" id="where-city">
+					<img class="radio-img where-radio" src="./public/images/type-city.png" alt="city">
+				</div>
+				<div class="where-image">
+					<input class="where-radio" type="radio" name="type" value="mountain" id="where-mountain">
+					<img class="radio-img where-radio" src="./public/images/type-mountain.png" alt="mountain">
+				</div>
+			</div>
+		</div>
+		<div id="step4-passengers" class="holidays-widget">
+			<div class="header-question">Who's going?</div>
+			<div class='answers'>
+				<div class="who-image">
+					<input class="who-radio" type="radio" name="who" value="single" id="who-single" checked="checked">
+						<img class="radio-img who-radio" src="./public/images/pax-single.png" alt="single">
+				</div>
+				<div class="who-image">
+					<input class="who-radio" type="radio" name="who" value="couple" id="who-couple">
+						<img class="radio-img who-radio" src="./public/images/pax-couple.png" alt="couple">
+				</div>
+				<div class="who-image">
+					<input class="who-radio" type="radio" name="who" value="fam" id="who-fam">
+					<img class="radio-img who-radio" src="./public/images/pax-fam.png" alt="fam">
+					<div class="who-fam">
+						<label for="who-adults" class="label who-adults">
+							<span class="label-desc">Adults</span>
+							<select id="who-adults" name="adults">
+							  <option value="1" selected>1</option>
+							  <option value="2">2</option>
+							  <option value="3">3</option>
+							  <option value="4">4</option>
+							  <option value="5">5</option>
+							  <option value="6">6</option>
+							  <option value="7">7</option>
+							  <option value="8">8</option>
+							  <option value="9">9</option>
+							</select>
+						</label>
+						<label for="who-children" class="label who-children">
+							<span class="label-desc">Children</span>
+							<select id="who-children" name="children">
+							  <option value="0" selected>0</option> 
+							  <option value="1">1</option>
+							  <option value="2">2</option>
+							  <option value="3">3</option>
+							  <option value="4">4</option>
+							  <option value="5">5</option>
+							</select>
+						</label>
+						<label for="who-infants" class="label who-infants">
+							<span class="label-desc">Infants</span>
+							<select id="who-infants" name="infants">
+							  <option value="0" selected>0</option> 
+							  <option value="1">1</option>
+							  <option value="2">2</option>
+							  <option value="3">3</option>
+							</select>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="step5-roulette" class="holidays-widget">
+			<div class="search-result">
+				<div class="hotel-question"><img src="./public/images/question.png" /></div>
+			</div>
+			<div class="roulette">
+				<img src="./public/images/fortune-wheel.png" alt="wheel" />
+			</div>
+		</div>
+		<div class="prev-button"> Prev </div>
+		<div class="next-button"> Next </div>
+		<div class="play-button"> Play </div>
+		<div class="progress-bar" class="holidays-widget">
+		</div>
+	</div>
+</body>
+</html>
