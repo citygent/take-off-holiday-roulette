@@ -173,7 +173,7 @@ body {
   margin-top: 40px;
 }
 
-.roulette img {
+.roulette.fast-roulette img {
   width: 350px;
   float: right;
   margin-top: 50px;
@@ -193,6 +193,37 @@ body {
     
     animation-name: spin;
     animation-duration: 2000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.roulette img{
+  width: 350px;
+  float: right;
+  margin-top: 65px;
+  margin-right: 70px;
+}
+
+.roulette.slower-roulette  img {
+  width: 350px;
+  float: right;
+  margin-top: 50px;
+  margin-right: 70px;
+  -webkit-animation-name: spin;
+    -webkit-animation-duration: 4000ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-name: spin;
+    -moz-animation-duration: 4000ms;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-timing-function: linear;
+    -ms-animation-name: spin;
+    -ms-animation-duration: 4000ms;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-timing-function: linear;
+    
+    animation-name: spin;
+    animation-duration: 4000ms;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
 }
@@ -250,12 +281,129 @@ body {
 }
 .search-result:before {
   border-color: rgba(83, 218, 245, 0);
-  border-left-color: #53daf5;
+  border-left-color: #46adad;
   border-width: 33px;
   margin-top: -33px;
 }
 
+.hotel {
+  display: none;
+  padding: 25px;
+}
+.hotel img {
+  width: 100%;   
+}
 
+.hotel-question img {
+      display: block;
+    margin: auto;
+    margin-top: 70px;
+}
+
+.desc-container {
+  background: white;
+  margin-top: -70px;
+  z-index: 99999;
+  position: absolute;
+  width: 298px;
+  border: 1px solid #e3e3e3;
+  padding: 10px;
+}
+
+.desc-container h3{
+  color: #1a2a52;
+  font-size: 12px;
+  margin-top: 5px;
+  text-transform: uppercase;
+  margin-bottom: 0px;
+}
+
+.desc-container h2 {
+  color: #E3464D;
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: 2px;
+  margin-bottom: 0px;
+}
+
+.short-description {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.star img {
+  margin-top:5px;
+  width: 15px; 
+  float: left; 
+}
+
+.trip-advisor {
+ margin-top: 5px;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-image: url("./public/images/logo-tripadvisor.png");
+  background-size: contain;
+  height: 19px;
+  margin-left: 80px;
+}
+
+.ratingEmpty {
+  background-image: url("./public/images/tripadvisor-icons.png");
+  background-position: left -16px;
+  width: 80px;
+  height: 16px;
+  background-repeat: no-repeat;
+  display: inline-block;
+  overflow: hidden;
+  line-height: 16px;
+  margin-top: 1.5px;
+  margin-left: 40px;
+}
+
+.ratingFill.star5 {
+
+}
+
+.price {
+    position: static;
+    clear: both;
+    display: block;
+    margin-top: 3px;
+    float: left;
+    color: #E3464D;
+}
+
+.from {
+    display: block;
+    font-size: 13px;
+    line-height: 14px;
+}
+
+.money {
+  float: left;
+  font-weight: bold;
+  line-height: 27px;
+}
+
+
+
+.right {
+    font-size: 11px !important;
+    line-height: 13px;
+    margin-top: 7px;
+    margin-left: 7px;
+    clear: none !important;
+    margin-left: 6px !important;
+    margin-top: -1px !important;
+}
+
+.arrow-hotel {
+  float: right;
+  width: 40px !important;
+  display: block;
+  margin-top: 6px;
+}
 #step3-holiday-type {
 
 }

@@ -1,0 +1,56 @@
+{
+
+  "Properties": {
+
+    "Property": [
+
+      {
+
+        "PropertyID": "1",
+
+        "PropertyName": "Hotel Sun Front",
+
+        "StarRating": "4.0",
+
+        "ReviewRating": "3.5",
+
+        "Location": "Mercury",
+
+        "Theme": "Beach",
+
+        "ShortDescription": "Enjoy the best Sunsets in the entire Solar System The Hotel Sun Front offers great suites with spectacular views.",
+
+        "MainImageURL": "http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2012/11/Xiangshawan-Desert-Lotus-Hotel-PLaT-Architects-2.jpg",
+
+        "PricePPPN": "75.00"
+
+      },
+
+      {
+
+        "PropertyID": "2",
+
+        "PropertyName": "Apartments Tan-o-Matic",
+
+        "StarRating": "3.0",
+
+        "ReviewRating": "3.0",
+
+        "Location": "Mercury",
+
+        "Theme": "Beach",
+
+        "ShortDescription": "Work on you tan from a place in our Solar System closer to the Sun. An exclusive property. Be the first one to be cought by a solar flare!",
+
+        "MainImageURL": "http://assets.inhabitat.com/wp-content/blogs.dir/1/files/2012/11/Xiangshawan-Desert-Lotus-Hotel-PLaT-Architects-2.jpg",
+
+        "PricePPPN": "55.00"
+
+      }
+
+    ]
+
+  }
+
+}
+

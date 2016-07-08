@@ -68,9 +68,55 @@ $(document).ready(function () {
     }
     console.log(search)
   }
-  function spinWheelofDeath () {
+
+  function spinWheel () {
     sendData()
   }
+
+  
+    $.ajax({
+      url: "https://d1m54pdnjzjnhe.cloudfront.net/pngineer/f7e4d030-44eb-11e6-bc2a-bd6977d48a11.json",
+      dataType: "text",
+      success: function(data) {
+          
+          data = $.parseJSON(data);
+          var numberOfResults = data.Properties.Property.length
+          var random = Math.floor((Math.random() * 10) + 1);
+          var item = data.Properties.Property[0]
+
+          var result = [
+            '<div class="hotel">',
+             // '<a href="'+ + '">',
+                '<img src="' + item.MainImageURL + '">', 
+                '<div class="desc-container">',
+                  '<h3>"' + item.Location + '"</span>',
+                  '<h2 class="name">' + item.PropertyName + '</h3>',
+                  '<div class="star-rating">',
+                    '<div class="star"><img src="./public/images/star.png"></div>',
+                    '<div class="star"><img src="./public/images/star.png"></div>',
+                    '<div class="star"><img src="./public/images/star.png"></div>',
+                    '<div class="star"><img src="./public/images/star.png"></div>',
+                    '<div class="star"><img src="./public/images/star.png"></div>',
+                  '</div>', 
+                  '<div class="trip-advisor">',
+                    '<span class="ratingEmpty"><span class="ratingFill star5"></span></span>',
+                  '</div>',
+                  '<p class="short-description">' + item.ShortDescription + '</p>',
+                  '<div>',
+                    '<span class="price">',
+                      '<span class="from">from</span>',
+                      '<span class="money">&pound;' + item.PricePPPN+ '</span>',
+                    '</span>',
+                  '</div>',
+                  '<img class="arrow-hotel" src="./public/images/arrow.png"/>',
+                '</div>',
+             // '</a>',
+            '</div>'
+          ].join('')
+
+          $('.search-result').append(result)
+      }
+    });
 // ====================================================
 // 'Dirty SPA nonsense'
   if ($('#step1-budget').hasClass('active')) {
@@ -102,8 +148,18 @@ $(document).ready(function () {
   })
 
   $('.play-button').click(function () {
-    spinWheelofDeath()
+    spinWheel()
     var $activeEl = $('.active')
+    $('.roulette').addClass('fast-roulette')
+    setTimeout(function () {
+      $('.roulette').removeClass('fast-roulette')
+      $('.roulette').addClass('slower-roulette')
+      setTimeout(function () {
+         $('.roulette').removeClass('slower-roulette')
+         $('.hotel-question').hide()
+         $('.hotel').fadeIn()
+      },3000)
+    },8000)
     $activeEl.hide().next().show()
     $activeEl.removeClass('active')
     $activeEl.next().addClass('active')
