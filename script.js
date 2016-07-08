@@ -45,7 +45,7 @@ $(document).ready(function () {
     }
   })
   function updateCohort () {
-    // well this is horrible! :)
+// well this is horrible! :)
     cohort.adults = $('#who-adults').val()
     cohort.children = $('#who-children').val()
     cohort.infants = $('#who-infants').val()
@@ -71,7 +71,15 @@ $(document).ready(function () {
   function spinWheelofDeath () {
     sendData()
   }
+  function checkRespectiveBox (e) {
+    var uncheckFamily = $(e.target).prev('input').attr('class').split(' ') && $(e.target).prev('input').attr('class').split(' ')[0]
+    $('.' + uncheckFamily).prop('checked', false)
+    $(e.target).prev('input.' + uncheckFamily).prop('checked', true)
+  }
 // ====================================================
+// click on image checks the box.
+  $('img.radio-img').click(checkRespectiveBox)
+
 // 'Dirty SPA nonsense'
   if ($('#step1-budget').hasClass('active')) {
     $('.prev-button').hide()
